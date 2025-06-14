@@ -1,63 +1,40 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
-</head>
-<body>
-     <main>
-        <section>
-            <h1>My Task Manager</h1>
-            <form onsubmit="addTask(event)">
-<input type="text" name="task" id="task-input" placeholder="task">
-<input type="submit" value="Add task">
-            </form>
-            <ul id="task-list"></ul>
-            <button onclick="clearTask()">delete</button>
-        </section>
-    </main>
-
-
-    <script src="./script.js"></script>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Task Manager</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>My Task Manager</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Task Manager</h1>
+    </header>
 
-  <main>
-    <form id="task-form" >
-      <input type="text" id="task-title" placeholder="Enter task title..." />
-      <button type="submit" >Add Task</button>
-      <p id="error-msg" class="error"></p>
-    </form>
+    <main>
+      <form onsubmit="register(event)" id="task-form">
+        <input
+          type="text"
+          id="tasktitle"
+          placeholder="Enter task title..."
+          name="tasktitle"
+        />
+        <button type="submit" value="register">Add Task</button>
+        <!-- <p id="error-msg" class="error"></p> -->
+      </form>
 
-    <div class="filters">
-      <button value="all">All</button>
-      <button value="completed">Completed</button>
-      <button value="pending">Pending</button>
-    </div>
+      <div class="filters">
+        <button value="all">All</button>
+        <button value="completed">Completed</button>
+        <button value="pending">Pending</button>
+      </div>
 
-    <section id="task-list"></section>
-  </main>
+      <section id="task-list"></section>
+    </main>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
